@@ -101,5 +101,13 @@ for i in fruits:
     else:
         print("not apple")
 
-#string method
+#string methods
 
+text = input("input sth: ")
+print(text.strip())
+print(len(text))
+
+print(text.lower())
+
+text = input("input sth: ")
+print(text.split("."))
