@@ -66,5 +66,40 @@ else:
 for x in range(0, 10): #start, stop, step
     print(x)
 
+loop= True
 
+while loop:
+    name = input("insert sth: ")
+    if name == "stop":
+        break
+
+
+
+#Lists and Tuples
+
+fruits = ["apple", "pear", 3]
+
+print(fruits[1])
+
+fruits.append("orange")
+
+print(fruits)
+
+fruits[1] = "blueberry"
+
+print(fruits)
+
+position = (2, 3, 4)
+
+
+# For Loop iteration
+
+
+for i in fruits:
+    if i == "apple":
+        print(i)
+    else:
+        print("not apple")
+
+#string method
 
