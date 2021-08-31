@@ -182,3 +182,14 @@ func(6)
 x = 'string'
 print(type(x))
 
+class number():
+    def __init__(self, num):
+        self.var = num
+
+    def display (self, x):
+        print(x)
+
+num = number()
+print(23)
+
+num.display(num.var)
