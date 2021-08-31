@@ -111,3 +111,53 @@ print(text.lower())
 
 text = input("input sth: ")
 print(text.split("."))
+
+#Slice Operator
+
+fruits = ["apple", "pear", 3]
+text = "Hello I am Jason"
+print(text[6:])
+
+#steps
+print(text[1:1])
+
+fruits[1:1] = ["Blueberries"]
+print(fruits)
+#insert
+
+#functions
+
+def addtwo(x):
+    return x+2
+
+x=5
+y=addtwo(x)
+print(y)
+
+def writestring(x):
+    return print(x)
+
+writestring("hello")
+
+file = open("basics.txt", "r")
+f = file.readlines()
+
+print(f)
+
+
+#using .count and .find
+string1 = 'hello'
+
+print(string1.find('o'))
+print(string1.count('z'))
+
+#optional parameters
+
+def func(x, text='2'):
+    print(x)
+    if text == '1':
+        print('text is 1')
+    else:
+        print('text is not 1')
+
+func('jason')
