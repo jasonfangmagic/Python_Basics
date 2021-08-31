@@ -161,3 +161,24 @@ def func(x, text='2'):
         print('text is not 1')
 
 func('jason')
+
+#try and except
+#global and local variables
+
+newVar = 9
+loop = True
+
+def func(x):
+    global newVar
+    newVar = 7
+    if x == 6:
+        return newVar
+    print(newVar)
+
+func(6)
+
+#objects and classes
+
+x = 'string'
+print(type(x))
+
