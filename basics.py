@@ -189,7 +189,4 @@ class number():
     def display (self, x):
         print(x)
 
-num = number()
-print(23)
-
-num.display(num.var)
+num = number(23)
