@@ -179,6 +179,12 @@ func(6)
 
 #objects and classes
 
+
+def func(x):
+    print("hello")
+
+func("a")
+
 x = 'string'
 print(type(x))
 
