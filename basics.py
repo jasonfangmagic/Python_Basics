@@ -219,3 +219,10 @@ print(emp1_2.fullname())
 
 employee.fullname(emp1_1)
 
+#optional parameters
+
+def func(x):
+    return x**2
+
+call = func(5)
+print(call)
