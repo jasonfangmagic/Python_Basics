@@ -196,3 +196,26 @@ class number():
         print(x)
 
 num = number(23)
+
+#
+class employee:
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+        self.email = first + '.' + last +'@company.com'
+
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+
+emp1_1 = employee('corey','Schafer', 50000)
+emp1_2 = employee('test','user', 60000)
+
+print(emp1_1.email)
+
+print('{} {}'.format(emp1_1.first, emp1_1.last))
+
+print(emp1_2.fullname())
+
+employee.fullname(emp1_1)
+
