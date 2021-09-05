@@ -221,8 +221,39 @@ employee.fullname(emp1_1)
 
 #optional parameters
 
-def func(x):
+def func(x = 1):
     return x**2
 
 call = func(5)
 print(call)
+
+def func(word, add=1, freq=1):
+    print(word*freq)
+
+call = func('hello', 5, 3)
+print(call)
+
+#static and class
+
+class person(object):
+    population=50
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @classmethod
+    def getpopulation(cls):
+        return cls.population()
+
+    @staticmethod
+    def isAdult(age):
+        return age >=18
+
+    def display(self):
+        print(self.name, 'is', self.age, 'years old')
+
+newperson = person('tim', 18)
+
+#object orientated programming
+
+print(type(True))
