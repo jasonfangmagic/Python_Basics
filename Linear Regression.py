@@ -20,22 +20,29 @@ predict = "G3"
 X = np.array(data.drop([predict], 1))
 
 Y = np.array(data[predict])
-
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X, Y, test_size=0.1)
 
+best = 0
 
-# linear = linear_model.LinearRegression()
+#save the best model
+
+# for _ in range(30):
 #
-# linear.fit(x_train, y_train)
+#     x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X, Y, test_size=0.1)
 #
-# acc = linear.score(x_test, y_test)
-
-# print(acc)
-
-
-#save the model
-# with open("student model.pickle", "wb") as f:
-#     pickle.dump(linear, f)
+#     linear = linear_model.LinearRegression()
+#
+#     linear.fit(x_train, y_train)
+#
+#     acc = linear.score(x_test, y_test)
+#
+#     print(acc)
+#
+#     if acc > best:
+#         best = acc
+#     #save the model
+#         with open("student model.pickle", "wb") as f:
+#             pickle.dump(linear, f)
 
 pickle_in = open("student model.pickle", "rb")
 linear = pickle.load(pickle_in)
@@ -54,3 +61,12 @@ linear.fit(x_train, y_train)
 acc = linear.score(x_test, y_test)
 
 print(acc)
+
+#plotting
+
+p = "G1"
+style.use("ggplot")
+pyplot.scatter(data[p], data["G3"])
+pyplot.xlabel(p)
+pyplot.ylabel("Final Grade")
+pyplot.show()
