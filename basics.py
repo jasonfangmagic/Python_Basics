@@ -257,3 +257,5 @@ newperson = person('tim', 18)
 #object orientated programming
 
 print(type(True))
+
+
