@@ -1,6 +1,9 @@
 import tensorflow
-import keras
+# import keras
+from tensorflow import keras
+
 import sklearn
+
 from sklearn import linear_model
 from sklearn.utils import shuffle
 import pandas as pd
