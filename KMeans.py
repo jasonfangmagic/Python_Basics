@@ -128,7 +128,9 @@ plt.ylim(y_min, y_max)
 plt.xticks(())
 plt.yticks(())
 plt.show()
-Full Code
+
+
+# Full Code
 import numpy as np
 import sklearn
 from sklearn.preprocessing import scale
