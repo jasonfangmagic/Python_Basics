@@ -47,11 +47,12 @@ x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X, Y
 #         with open("student model.pickle", "wb") as f:
 #             pickle.dump(linear, f)
 
-pickle_in = open("student model.pickle", "rb")
+pickle_in = open("student,  model.pickle", "rb")
 linear = pickle.load(pickle_in)
 
 print("Co: \n", linear.coef_)
 print("Intercept: \n", linear.intercept_)
+
 
 predictions = linear.predict(x_test)
 
