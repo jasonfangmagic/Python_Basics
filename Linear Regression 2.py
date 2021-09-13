@@ -60,6 +60,7 @@ X_train, X_test, Y_train, Y_test = sklearn.model_selection.train_test_split(X, Y
 
 clf = LinearRegression()
 clf.fit(X_train, Y_train)
+
 ACC = clf.score(X_test, Y_test)
 
 print(ACC)
@@ -67,7 +68,6 @@ print(ACC)
 #use svm
 clf = svm.SVR(kernel='poly')
 clf.fit(X_train, Y_train)
-#save the model
 
 
 ACC = clf.score(X_test, Y_test)
