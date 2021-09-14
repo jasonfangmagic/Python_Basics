@@ -131,6 +131,7 @@ regression_line = [(m*x)+b for x in xs]
 for x in xs:
     regression_line.append((m*x)+b)
 
+#same
 plt.scatter(xs, ys)
 plt.plot(xs, regression_line)
 plt.show()
