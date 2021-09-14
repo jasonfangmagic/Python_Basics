@@ -23,7 +23,8 @@ def create_dataset (hm, variance, step = 2, correlation = False):
         elif correlation and correlation == 'neg':
             val -= step
     xs = [i for i in range(len(ys))]
-    return np.array(xs, dtype=np.float64), np.array(ys, dtype=np.float64)
+    return np.array(xs, dtype=np.float64), \
+           np.array(ys, dtype=np.float64)
 
 xs, ys = create_dataset(100, 80, 2, correlation= 'pos')
 
