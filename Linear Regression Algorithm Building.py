@@ -9,8 +9,8 @@ import random
 
 style.use('fivethirtyeight')
 
-# xs = np.array([1,2,3,4,5,6], dtype=np.float64)
-# ys = np.array([5,4,2,3,5,7], dtype=np.float64)
+# xs = np.array([2,5,4,7,9,11], dtype=np.float64)
+# ys = np.array([5,7,8,10,12,13], dtype=np.float64)
 
 def create_dataset (hm, variance, step = 2, correlation = False):
     val = 1
@@ -27,30 +27,26 @@ def create_dataset (hm, variance, step = 2, correlation = False):
 
 xs, ys = create_dataset(100, 80, 2, correlation= 'pos')
 
+
 plt.scatter(xs,ys)
 plt.show()
 
-def best_fit_slope(xs, ys):
+
+
+def best_fit_slope_and_intercept(xs, ys):
     m =( ((mean(xs)*mean(ys)) - mean(xs*ys)) /
           ((mean(xs)*mean(xs)) - mean(xs*xs)))
 
     b = mean(ys) - m*mean(xs)
     return m, b
 
-m,b = best_fit_slope(xs, ys)
-
+m,b = best_fit_slope_and_intercept(xs, ys)
 
 
 print(m, b)
 
 regression_line = [(m*x)+b for x in xs]
 
-
-#the same
-# for x in xs:
-#     regression_line.append((m*x)+b)
-
-#same
 plt.scatter(xs, ys)
 plt.plot(xs, regression_line)
 plt.show()
