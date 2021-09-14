@@ -69,10 +69,6 @@ print(r_squared)
 
 
 
-
-
-
-
 import math
 import random
 
