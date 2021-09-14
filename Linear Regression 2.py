@@ -148,3 +148,5 @@ def coefficient_of_determination(ys_orig, ys_line):
 r_squared = coefficient_of_determination(ys, regression_line)
 print(r_squared)
 
+k
+
