@@ -80,7 +80,6 @@ for i in range(25):
             vote, confidence = k_nearest_neighbors(train_set, data, k=5)
             if group == vote:
                 correct +=1
-
             # else:
             #     print(confidence)
             total +=1
