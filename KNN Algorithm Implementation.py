@@ -88,7 +88,7 @@ for i in range(25):
     ACCS.append(correct/total)
 
 print(sum(ACCS)/len(ACCS))
-
+ 
 
 
 
