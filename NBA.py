@@ -105,3 +105,14 @@ DwayneWade_PTS = [2040, 1397, 1254, 2386, 2045, 1941, 1082, 1463, 1028, 1331]
 Points = np.array([KobeBryant_PTS, JoeJohnson_PTS, LeBronJames_PTS, CarmeloAnthony_PTS, DwightHoward_PTS, ChrisBosh_PTS,
                    ChrisPaul_PTS, KevinDurant_PTS, DerrickRose_PTS, DwayneWade_PTS])
 
+mydata = np.arange(20)
+print(mydata)
+
+np.reshape(mydata,(4,5))
+np.matrix.round(FieldGoals/Games)
+
+import matplotlib.pyplot as plt
+
+plt.plot(Salary[0], c='Black', ls='--', marker='s', ms=7, label=Players[0])
+plt.xticks(list(range(0,10)),Seasons)
+plt.show()
