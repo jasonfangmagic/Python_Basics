@@ -114,5 +114,28 @@ np.matrix.round(FieldGoals/Games)
 import matplotlib.pyplot as plt
 
 plt.plot(Salary[0], c='Black', ls='--', marker='s', ms=7, label=Players[0])
+plt.plot(Salary[1], c='Red', ls='--', marker='o', ms=7, label=Players[1])
+plt.plot(Salary[2], c='Green', ls='--', marker='D', ms=7, label=Players[2])
+plt.plot(Salary[3], c='blue', ls='--', marker='^', ms=7, label=Players[3])
+plt.plot(Salary[4], c='Magenta', ls='--', marker='s', ms=7, label=Players[4])
+plt.plot(Salary[5], c='Yellow', ls='--', marker='^', ms=7, label=Players[5])
+plt.plot(Salary[6], c='Black', ls='--', marker='s', ms=7, label=Players[6])
+plt.plot(Salary[7], c='Red', ls='--', marker='o', ms=7, label=Players[7])
+plt.plot(Salary[8], c='Green', ls='--', marker='D', ms=7, label=Players[8])
+plt.plot(Salary[9], c='blue', ls='--', marker='^', ms=7, label=Players[9])
+
+plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05),
+          fancybox=True, shadow=True, ncol=5)
 plt.xticks(list(range(0,10)),Seasons)
 plt.show()
+
+def myplot(data,playerlist = Players):
+    for i in playerlist:
+        plt.plot(data[i], c='Black', ls='--', marker='s', ms=7, label=Players[i])
+    plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05),
+               fancybox=True, shadow=True, ncol=5)
+    plt.xticks(list(range(0, 10)), Seasons)
+    plt.show()
+
+myplot(Salary,[0])
+
