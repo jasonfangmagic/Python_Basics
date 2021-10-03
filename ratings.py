@@ -119,6 +119,10 @@ plt.show()
 g = sns.FacetGrid(data, row = 'Genre', col = 'Year', hue = 'Genre')
 kws = dict(s=50, linewidth=0.5, edgecolor='black')
 g = g.map(plt.scatter, "Ratings", "AudienceRatings",**kws)
+g.set(xlim = (0,100), ylim = (0,100))
+for ax in g.axes.flat:
+    ax.plot((0,100), (0,100), c='gray', ls = '--')
+g.add_legend()
 plt.show()
 
 g = sns.FacetGrid(data, row = 'Genre', col = 'Year', hue = 'Genre')
