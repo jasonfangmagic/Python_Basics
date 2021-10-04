@@ -126,7 +126,7 @@ vis8 = sns.violinplot(data=data[data.Genre=='Drama'], x='Year', y = 'Ratings')
 plt.show()
 
 #create facet grid
-
+sns.set_style('white')
 g = sns.FacetGrid(data, row = 'Genre', col = 'Year', hue = 'Genre')
 kws = dict(s=50, linewidth=0.5, edgecolor='black')
 g = g.map(plt.scatter, "Ratings", "AudienceRatings",**kws)
@@ -143,12 +143,14 @@ plt.show()
 sns.set_style('dark', {'axes.facecolor':'black'})
 f, axes = plt.subplots(2,2, figsize=(15,15))
 v1 = sns.kdeplot(data.Budget, data.AudienceRatings,
-                 shade=True,shade_lowest=True, cmap='inferno',ax = axes[0,0])
+                 shade=True,shade_lowest=True,
+                 cmap='inferno',ax = axes[0,0])
 v1b = sns.kdeplot(data.Budget, data.AudienceRatings,
                  cmap='cool',ax = axes[0,0])
 
 v2 = sns.kdeplot(data.Budget, data.Ratings,
-                 shade=True,shade_lowest=True, cmap='inferno',ax = axes[0,1])
+                 shade=True,shade_lowest=True,
+                 cmap='inferno',ax = axes[0,1])
 v2b = sns.kdeplot(data.Budget, data.Ratings,
                  cmap='cool',ax = axes[0,1])
 v1.set(xlim=(-40,230))
@@ -158,9 +160,11 @@ v3 = sns.violinplot(data=data, x='Year', y = 'Budget',
                     palette='YlOrRd',ax = axes[1,0])
 
 v4 = sns.kdeplot(data.Ratings, data.AudienceRatings,
-                   shade = True, shade_lowest = False, cmap = 'Blues_r',ax = axes[1,1])
+                   shade = True, shade_lowest = False,
+                 cmap = 'Blues_r',ax = axes[1,1])
 v4b = sns.kdeplot(data.Ratings, data.AudienceRatings,
                    cmap = 'gist_gray_r', ax = axes[1,1])
 plt.show()
+
 
 

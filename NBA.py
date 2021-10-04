@@ -126,7 +126,7 @@ plt.plot(Salary[9], c='blue', ls='--', marker='^', ms=7, label=Players[9])
 
 plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05),
           fancybox=True, shadow=True, ncol=5)
-plt.xticks(list[0:10],Seasons)
+plt.xticks(list(range(0,10)),Seasons)
 plt.show()
 
 def myplot(data,playerlist = Players):
