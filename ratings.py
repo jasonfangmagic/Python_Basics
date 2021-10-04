@@ -65,6 +65,7 @@ def myplot(data, gen = data.Genre.cat.categories):
 myplot (data, gen= "Action")
 
 #stacked
+
 list1 = []
 mylabels = []
 for gen in data.Genre.cat.categories:
@@ -72,8 +73,18 @@ for gen in data.Genre.cat.categories:
         mylabels.append(gen)
 print(list1)
 
+sns.set_style('whitegrid')
+fig, axes = plt.subplots()
+fig.set_size_inches(11.7,8.27) #size of A4 paper
 h = plt.hist(list1,stacked=True, bins=30, rwidth=1, label=mylabels)
-plt.legend()
+plt.title("Movie Budget Distribution", fontsize = 35,
+          color = 'DarkBlue', fontname='Console')
+plt.ylabel('Number of Movies', fontsize = 35,color = 'Red')
+plt.xlabel('Budget', fontsize = 35, color = 'Green')
+plt.xticks(fontsize= 20 )
+plt.yticks(fontsize= 20)
+plt.legend(prop={'size':20}, frameon = True,
+           fancybox=True, shadow=True, framealpha=1)
 plt.show()
 
 #kernel density estimation plot
@@ -128,3 +139,28 @@ plt.show()
 g = sns.FacetGrid(data, row = 'Genre', col = 'Year', hue = 'Genre')
 g = g.map(plt.hist, "Budget")
 plt.show()
+
+sns.set_style('dark', {'axes.facecolor':'black'})
+f, axes = plt.subplots(2,2, figsize=(15,15))
+v1 = sns.kdeplot(data.Budget, data.AudienceRatings,
+                 shade=True,shade_lowest=True, cmap='inferno',ax = axes[0,0])
+v1b = sns.kdeplot(data.Budget, data.AudienceRatings,
+                 cmap='cool',ax = axes[0,0])
+
+v2 = sns.kdeplot(data.Budget, data.Ratings,
+                 shade=True,shade_lowest=True, cmap='inferno',ax = axes[0,1])
+v2b = sns.kdeplot(data.Budget, data.Ratings,
+                 cmap='cool',ax = axes[0,1])
+v1.set(xlim=(-40,230))
+v2.set(xlim=(-40,230))
+
+v3 = sns.violinplot(data=data, x='Year', y = 'Budget',
+                    palette='YlOrRd',ax = axes[1,0])
+
+v4 = sns.kdeplot(data.Ratings, data.AudienceRatings,
+                   shade = True, shade_lowest = False, cmap = 'Blues_r',ax = axes[1,1])
+v4b = sns.kdeplot(data.Ratings, data.AudienceRatings,
+                   cmap = 'gist_gray_r', ax = axes[1,1])
+plt.show()
+
+
