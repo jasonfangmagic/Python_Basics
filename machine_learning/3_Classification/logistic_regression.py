@@ -35,8 +35,12 @@ cm = confusion_matrix(y_test, y_pred)
 print(cm)
 
 from sklearn.metrics import f1_score
-f1 = f1_score(y_test, y_pred, average='micro')
+f1 = f1_score(y_test, y_pred, average='macro')
 print(f1)
+
+from sklearn.metrics import accuracy_score
+acc=accuracy_score(y_test, y_pred)
+print(acc)
 
 pred= classifier.predict(sc.transform([[30,87000]]))
 print(pred)
