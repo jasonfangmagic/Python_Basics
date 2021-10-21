@@ -32,3 +32,11 @@ plt.title('Salary vs Experience (Test set)')
 plt.xlabel('Years of Experience')
 plt.ylabel('Salary')
 plt.show()
+
+#pridct single point
+print(regressor.predict([[12]]))
+
+print(regressor.coef_)
+print(regressor.intercept_)
+
+#Salary=9345.94×YearsExperience+26816.19
