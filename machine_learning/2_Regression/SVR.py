@@ -31,11 +31,13 @@ regressor = SVR(kernel = 'rbf')
 regressor.fit(X, y)
 print(y)
 
+acc = regressor.score(X, y)
+print(acc)
+
 y_pred = regressor.predict(X)
 print(y_pred)
 
-acc = regressor.score(X, y)
-print(acc)
+
 
 #r square
 from sklearn.metrics import r2_score
