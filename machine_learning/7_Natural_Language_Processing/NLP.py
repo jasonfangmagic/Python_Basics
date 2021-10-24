@@ -34,7 +34,8 @@ y = dataset.iloc[:, 1].values
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20, random_state = 0)
+X_train, X_test, y_train, y_test = train_test_split(X, y,
+                       test_size = 0.20, random_state = 0)
 
 # Training the Naive Bayes model on the Training set
 from sklearn.naive_bayes import GaussianNB
@@ -43,17 +44,13 @@ classifier.fit(X_train, y_train)
 
 # Training the Decision Tree Classification model on the Training set
 from sklearn.tree import DecisionTreeClassifier
-classifier = DecisionTreeClassifier(criterion = 'entropy', random_state = 0)
+classifier = DecisionTreeClassifier(criterion = 'entropy',
+                                    random_state = 0)
 classifier.fit(X_train, y_train)
 
 # Training the SVM model on the Training set
 from sklearn.svm import SVC
 classifier = SVC(kernel = 'rbf', random_state = 0)
-classifier.fit(X_train, y_train)
-
-# Training the Random Forest Classification model on the Training set
-from sklearn.ensemble import RandomForestClassifier
-classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 0)
 classifier.fit(X_train, y_train)
 
 # Predicting the Test set results
@@ -70,6 +67,13 @@ print(f1)
 from sklearn.metrics import accuracy_score
 acc=accuracy_score(y_test, y_pred)
 print(acc)
+
+
+
+
+
+
+
 
 
 
