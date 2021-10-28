@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c42560b5-0a72-4312-8bfc-599b57dab8f8" name="Changes" comment="Python">
-      <change afterPath="$PROJECT_DIR$/.idea/rSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Python_Basics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python_Basics.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +35,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="R.Unnamed">
     <configuration name="Python_Basics" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -82,8 +83,8 @@
       <method v="2" />
     </configuration>
     <configuration name="Unnamed" type="R">
-      <r-file-path value="$PROJECT_DIR$/../../R/main.R" />
-      <working-directory value="$PROJECT_DIR$/../../Python_Basics" />
+      <r-file-path value="$USER_HOME$/R/main.R" />
+      <working-directory value="$USER_HOME$/Python_Basics" />
       <interpreter-arguments value="Suggested (4.1.1) /usr/local/bin/R" />
       <script-arguments value="" />
       <envs />
@@ -104,6 +105,7 @@
       <updated>1635370239070</updated>
       <workItem from="1635370240936" duration="1260000" />
       <workItem from="1635371641672" duration="1945000" />
+      <workItem from="1635428301860" duration="172000" />
     </task>
     <task id="LOCAL-00001" summary="Python">
       <created>1635371480606</created>
