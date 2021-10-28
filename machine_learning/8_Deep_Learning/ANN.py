@@ -15,7 +15,7 @@ y = dataset.iloc[:, -1].values
 print(X)
 print(y)
 
-# Label Encoding the "Gender" column
+# Label Encoding the "Gender" column#
 from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
 X[:, 2] = le.fit_transform(X[:, 2])
